@@ -19,7 +19,7 @@ const SortSelector = ({onSortSelect,sortOrder}:Props) => {
     const currentLabelOrder = sortOerders.find(o => o.value=== sortOrder )
     return (
     <Menu>
-        <MenuButton  as={Button} rightIcon={<BsChevronDown/>}>Ordred : By {currentLabelOrder.label || 'Relevance'}</MenuButton>
+        <MenuButton  as={Button} rightIcon={<BsChevronDown/>}>Ordred : By {currentLabelOrder?.label || 'Relevance'}</MenuButton>
         <MenuList>
             {sortOerders.map(order =><MenuItem onClick={()=>onSortSelect(order.value)} value={order.value} key={order.value}>{order.label}</MenuItem>)}            
         </MenuList>
